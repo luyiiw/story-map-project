@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Elfreth's Alley",
+        "address": "126 Elfreth's Alley, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14243373563225, 39.952923411022056]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Philly Cheese Steak",
+        "address": "206 Market St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14417180709368, 39.949814506324344]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Betsy Ross House",
+        "address": "239 Arch St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.14453408290949, 39.95244053699293]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Independence Hall",
+        "address": "520 Chestnut St, Philadelphia, PA 19106"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.15004562895713, 39.94917669629378]
+      }
+    }
+  ]
+}

@@ -87,6 +87,19 @@ class SlideDeck {
     this.hideAllSlides(this.slides);
     slide.classList.remove('hidden');
 
+    const body = document.body;
+
+    // Adding in special behavior for the title slide to remove the map
+    if (slide.id === 'title-slide') {
+      body.classList.add('title-mode');
+      this.dataLayer.clearLayers();
+      return;
+    } else {
+      // For all other slides, make sure the map is visible again
+      body.classList.remove('title-mode');
+    }
+
+    // Have normal behavior for all non-title slides 
     const collection = await this.getSlideFeatureCollection(slide);
     const options = this.slideOptions[slide.id];
     const layer = this.updateDataLayer(collection, options);

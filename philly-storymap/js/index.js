@@ -3,11 +3,32 @@ import { SlideDeck } from './slidedeck.js';
 const map = L.map('map').setView([0, 0], 0);
 
 // ## The Base Tile Layer
-const baseTileLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', {
+// Changing the default base map
+// CARTO Light Map
+L.tileLayer(
+  'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+  {
+    maxZoom: 19,
+    attribution:
+      '&copy; OpenStreetMap contributors &copy; CARTO'
+  }
+).addTo(map); 
+
+// Stadia map
+/** L.tileLayer(
+  'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png',
+  {
+    maxZoom: 20,
+    attribution: '&copy; OSM &copy; Stadia Maps'
+  }
+).addTo(map); */
+
+
+/** const baseTileLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', {
   maxZoom: 16,
   attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
 });
-baseTileLayer.addTo(map);
+baseTileLayer.addTo(map); */
 
 // ## Interface Elements
 const slides = document.querySelectorAll('.slide');

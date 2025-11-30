@@ -68,3 +68,34 @@ main {
 .slide-nav-select {
   min-width: 0;
 }
+
+/* Chang the title slide, to remove the map and show an image instead */
+body.title-mode .map {
+  display: none;
+}
+
+body.title-mode main {
+  display: block;
+}
+
+body.title-mode .slide-section {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  box-shadow: none;
+}
+
+/* Simple layout the title image */
+.title-image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.title-image img {
+  flex: 1 1 45%;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}

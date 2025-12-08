@@ -8,13 +8,17 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.48.0",
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
     "eslint-config-google": "^0.14.0",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0"
   },
@@ -30,7 +34,9 @@
     "env": {
       "browser": true
     },
-    "ignorePatterns": ["examples/**/*.js"],
+    "ignorePatterns": [
+      "examples/**/*.js"
+    ],
     "globals": {
       "L": "readonly"
     },
@@ -41,7 +47,9 @@
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
-    "ignoreFiles": ["examples/**/*.css"],
+    "ignoreFiles": [
+      "examples/**/*.css"
+    ],
     "rules": {
       "declaration-empty-line-before": null,
       "declaration-block-no-redundant-longhand-properties": null

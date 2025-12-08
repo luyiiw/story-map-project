@@ -1,18 +1,20 @@
 import { SlideDeck } from './slidedeck.js';
+// adjust for the view to start in Philadelphia instead of World
+// const map = L.map('map').setView([0, 0], 0);
+const map = L.map('map').setView([39.9526, -75.1652], 13);
 
-const map = L.map('map').setView([0, 0], 0);
 
 // ## The Base Tile Layer
 // Changing the default base map
 // CARTO Light Map
 L.tileLayer(
-  'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-  {
-    maxZoom: 19,
-    attribution:
-      '&copy; OpenStreetMap contributors &copy; CARTO'
-  }
-).addTo(map); 
+    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    {
+      maxZoom: 19,
+      attribution:
+      '&copy; OpenStreetMap contributors &copy; CARTO',
+    },
+).addTo(map);
 
 // Stadia map
 /** L.tileLayer(

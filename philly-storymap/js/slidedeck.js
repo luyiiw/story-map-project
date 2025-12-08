@@ -41,7 +41,7 @@ class SlideDeck {
         if (feature.properties && feature.properties.label) {
           layer.bindTooltip(feature.properties.label);
         }
-      }
+      },
     };
     const geoJsonLayer = L.geoJSON(data, options || defaultOptions)
         .addTo(this.dataLayer);
@@ -89,17 +89,19 @@ class SlideDeck {
 
     const body = document.body;
 
-    // Adding in special behavior for the title slide to remove the map
-    if (slide.id === 'title-slide') {
+    // Special behavior for slides that should NOT show the map
+    const noMapSlides = ['title-slide', 'conclusion-slide'];
+
+    if (noMapSlides.includes(slide.id)) {
       body.classList.add('title-mode');
-      this.dataLayer.clearLayers();
-      return;
+      this.dataLayer.clearLayers(); // clear anything on the map
+      return; // don't load any GeoJSON
     } else {
       // For all other slides, make sure the map is visible again
       body.classList.remove('title-mode');
     }
 
-    // Have normal behavior for all non-title slides 
+    // Have normal behavior for all non-title slides
     const collection = await this.getSlideFeatureCollection(slide);
     const options = this.slideOptions[slide.id];
     const layer = this.updateDataLayer(collection, options);

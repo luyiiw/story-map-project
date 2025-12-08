@@ -100,7 +100,7 @@ body.title-mode .slide-section {
   object-fit: cover;
 }
 
-/* Embed Video*/
+/* Embed Video */
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 ratio */

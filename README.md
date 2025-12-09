@@ -1,5 +1,6 @@
 # One-Day Guide to Philadelphia StoryMap
 Created by Lu Yii Wong 
+
 Fall 2025
 
 ## Content Overview
@@ -47,8 +48,6 @@ Visitors with limited time (one day) to explore Philadelphia who want a guided, 
 ---
 
 ## Data Sources & Citations
-
-**Location Data**
 
 * **Location Data:** All latitude/longitude coordinates were derived using **Google Maps** (accessed 2025).
 

@@ -3,7 +3,6 @@
  */
 class SlideDeck {
   /**
-   * Constructor for the SlideDeck object.
    * @param {NodeList} slides A list of HTML elements containing the slide text.
    * @param {L.map} map The Leaflet map where data will be shown.
    * @param {object} slideOptions The options to create each slide's L.geoJSON

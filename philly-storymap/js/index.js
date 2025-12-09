@@ -37,32 +37,8 @@ const slides = document.querySelectorAll('.slide');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 
-const slideOptions = {
-  'second-slide': {
-    style: (feature) => {
-      return {
-        color: 'red',
-        fillColor: 'green',
-        fillOpacity: 0.5,
-      };
-    },
-    onEachFeature: (feature, layer) => {
-      layer.bindTooltip(feature.properties.label);
-    },
-  },
-  'third-slide': {
-    style: (feature) => {
-      return {
-        color: 'blue',
-        fillColor: 'yellow',
-        fillOpacity: 0.5,
-      };
-    },
-    onEachFeature: (feature, layer) => {
-      layer.bindTooltip(feature.properties.label);
-    },
-  },
-};
+const slideOptions = {};  // now nothing special per slide
+
 
 // ## The SlideDeck object
 const deck = new SlideDeck(slides, map, slideOptions);

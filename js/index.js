@@ -37,7 +37,7 @@ const slides = document.querySelectorAll('.slide');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 
-const slideOptions = {};  // now nothing special per slide
+const slideOptions = {}; // now nothing special per slide
 
 
 // ## The SlideDeck object

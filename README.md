@@ -61,7 +61,7 @@ Visitors with limited time (one day) to explore Philadelphia who want a guided, 
 
 ---
 
-## ✔️ Accessibility Notes
+## Accessibility Notes
 
 * All images include `alt` text
 * Heading structure uses `<h1>` for title slides and `<h2>` for all stops
